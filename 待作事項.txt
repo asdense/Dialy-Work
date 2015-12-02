@@ -6,7 +6,6 @@
 2.C++ 書
 3.鳥哥 (Linux C)
 
-
 ◎新技術學習
 1.GitHub
 2.Linkdin
