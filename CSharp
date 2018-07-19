@@ -1,8 +1,11 @@
 C# 1
+-------------------------------------------------------------
 
 C# 1.1
+-------------------------------------------------------------
 
 C# 2
+-------------------------------------------------------------
 2.1 匿名規則
 委派可使用匿名規則 但之後可被LAMBDA取代
 不過匿名規則提供LAMBDA運算沒有的功能
@@ -11,3 +14,26 @@ C# 2
 Delegate只能使用Dowork(static function) 
 
 Q LAMBDA 跟static FUNCTION差異?
+
+2.2 NULL
+T? 是 Nullable<T> 的縮寫
+ex: int? test = null; (V)
+int test = null; (X)
+
+2.3 迭代器 / yield
+foreach 會呼叫迭代器 MoveNext 每次都會在 yield return 先回傳 然後iterator 先暫存在當下 然後再繼續用
+sample code : https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/keywords/yield
+
+2.4 共變數/ 反變數
+‧陣列類型、委派類型和泛型型別引數的隱含參考轉換
+
+Q 奇怪這有點像 向上轉型 向下轉型 等
+sample code : https://dotblogs.com.tw/daniel/2018/01/09/151636
+
+C# 3
+-------------------------------------------------------------
+3.1 物件和集合初始設定式
+- 新的匿名類型中的每個物件都有兩個公用屬性
+Code: Cat cat = new Cat { Age = 10, Name = "Fluffy" };
+
+Q 是好用不過要Over
