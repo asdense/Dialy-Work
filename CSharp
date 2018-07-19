@@ -1,0 +1,13 @@
+C# 1
+
+C# 1.1
+
+C# 2
+2.1 匿名規則
+委派可使用匿名規則 但之後可被LAMBDA取代
+不過匿名規則提供LAMBDA運算沒有的功能
+用執行緒的時候使用委派相關就很好用
+
+Delegate只能使用Dowork(static function) 
+
+Q LAMBDA 跟static FUNCTION差異?
