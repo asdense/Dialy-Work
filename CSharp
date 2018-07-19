@@ -36,4 +36,11 @@ C# 3
 - 新的匿名類型中的每個物件都有兩個公用屬性
 Code: Cat cat = new Cat { Age = 10, Name = "Fluffy" };
 
-Q 是好用不過要Over
+Q 是好用，不過要寫INTERFACE
+
+3.2 Lambda 運算式
+LAMBDA運算式匿名凾式
+
+Q非同步 LAMBDA ?
+QFun / Action
+Q區域Fun 跟 LAMBDA 差異：https://docs.microsoft.com/zh-tw/dotnet/csharp/local-functions-vs-lambdas
