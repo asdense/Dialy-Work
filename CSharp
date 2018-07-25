@@ -51,7 +51,29 @@ LAMBDA 吃的Variable會將外部的copy一份，而不是直接使用。
 Q 委派符合記憶體回收的資格 ?
 使用參數 ( params / in / out )
 params: 方便待參數 可LIST
-in:
-out:
-ref:
-ref 需要在執行前初始化參數(給值)而 out 是在程式結束前需要初始化參數(給值)
+in: 4.5.1 也還不行用，要等到更新版 ? - 好處是call by reference效率較高，不須重新create 適合大資訊
+out/ref:ref 需要在執行前初始化參數(給值)而 out 是在程式結束前需要初始化參數(給值)
+
+3.3 擴充方法
+擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。
+public static int WordCount(this String str){ } // 蠻猛的用 this
+// 然後可以使用 xx.WordCount() 來使用
+
+3.4 匿名類型
+---
+var v = new { Amount = 108, Message = "Hello" };  
+
+// Rest the mouse pointer over v.Amount and v.Message in the following  
+// statement to verify that their inferred types are int and string.  
+Console.WriteLine(v.Amount + v.Message);  
+---
+無法轉型 - 匿名型別是直接衍生自 object，並且無法轉換成 object 以外之任何類型的 class 類型。
+
+3.5 自動屬性
+class Customer
+{
+    // Auto-Impl Properties for trivial get and set
+    public double TotalPurchases { get; set; }
+    public string Name { get; set; }
+}
+
