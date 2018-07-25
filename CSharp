@@ -77,3 +77,19 @@ class Customer
     public string Name { get; set; }
 }
 
+3.6 VAR
+
+3.7 Language Integrated Query (LINQ)
+「查詢運算式」以及撰寫為「方法查詢」的語意對等查詢。
+        //Query syntax:
+        IEnumerable<int> numQuery1 = 
+            from num in numbers
+            where num % 2 == 0
+            orderby num
+            select num;
+
+        //Method syntax:
+        IEnumerable<int> numQuery2 = numbers.Where(num => num % 2 == 0).OrderBy(n => n);
+ Where 會產生已篩選的序列，而 Orderby 接著會透過排序來運作於該序列。因為查詢會傳回 IEnumerable，所以您可以將方法呼叫鏈結在一起。
+ 使用參考：https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/linq/standard-query-operators-overview
+
