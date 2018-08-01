@@ -143,3 +143,17 @@ Visual Studio .NET 2013：
 .NET 編譯器平台 SDK：
 -------------------------------------------------------------
 .NET 編譯器平台 SDK 讓您能夠撰寫對 C# 程式碼執行靜態分析的程式碼。 您可以使用這些 API 找出可能的錯誤 (或是不正確的做法)、建議修正程式，甚至實作那些修正程式。
+
+
+C# 6
+-------------------------------------------------------------
+6.1 針對屬性做動作，private
+public Standing YearInSchool { get; set; } = Standing.Freshman;
+
+6.2 使用using static xxx => use this namespace all static function
+
+6.3 NULL 條件運算子 ?.
+var first = person?.FirstName;  如果person = null, first = null
+
+6.4 字串插值 ( 前面加上$ )
+public string FullName => $"{FirstName} {LastName}";
