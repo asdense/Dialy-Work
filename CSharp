@@ -171,16 +171,25 @@ public string GetAllGrades() =>
 
 6.5 例外篩選條件 
 多了一個when
- try
-        {
-            var responseText = await stringTask;
-            return responseText;
-        }
-        catch (System.Net.Http.HttpRequestException e) when (e.Message.Contains("301"))
-        {
-            return "Site Moved";
-        }
+public void MethodThatFailsButHasRecoveryPath()
+{
+    try {
+        PerformFailingOperation();
+    } catch (Exception e) when (e.LogException())
+    {
+        // This is never reached!
+    }
+    catch (RecoverableException ex)
+    {
+        Console.WriteLine(ex.ToString());
+        // This can still catch the more specific
+        // exception because the exception filter
+        // above always returns false.
+        // Perform recovery here 
+    }
+}
 
+如果沒跑到CATCH就會壞掉
 ------
         int nTest = 5;
         nTest.test();
@@ -189,6 +198,6 @@ public string GetAllGrades() =>
             return true;
         }
 
-
+6.6 nameof
 
 Q 正規 需要用到
