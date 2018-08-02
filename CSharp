@@ -147,6 +147,9 @@ Visual Studio .NET 2013：
 -------------------------------------------------------------
 .NET 編譯器平台 SDK 讓您能夠撰寫對 C# 程式碼執行靜態分析的程式碼。 您可以使用這些 API 找出可能的錯誤 (或是不正確的做法)、建議修正程式，甚至實作那些修正程式。
 
+\*
+\* C# 5.0 搭配 .NET Framework4.5.2 <---- Visual Studio 2013版 最多只能支援到 .NET Framework4.6
+\*
 
 C# 6
 -------------------------------------------------------------
@@ -160,3 +163,32 @@ var first = person?.FirstName;  如果person = null, first = null
 
 6.4 字串插值 ( 前面加上$ )
 public string FullName => $"{FirstName} {LastName}";
+
+// LINQ +
+public string GetAllGrades() =>
+    $@"All Grades: {Grades.OrderByDescending(g => g)
+    .Select(s => s.ToString("F2")).Aggregate((partial, element) => $"{partial}, {element}")}";
+
+6.5 例外篩選條件 
+多了一個when
+ try
+        {
+            var responseText = await stringTask;
+            return responseText;
+        }
+        catch (System.Net.Http.HttpRequestException e) when (e.Message.Contains("301"))
+        {
+            return "Site Moved";
+        }
+
+------
+        int nTest = 5;
+        nTest.test();
+        public static bool test(this int e)
+        {
+            return true;
+        }
+
+
+
+Q 正規 需要用到
