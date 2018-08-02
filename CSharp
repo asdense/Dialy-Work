@@ -200,4 +200,65 @@ public void MethodThatFailsButHasRecoveryPath()
 
 6.6 nameof
 
+6.7 集合初始設定式的擴充方法：
+集合初始設定式可以依賴可存取的擴充方法，以及成員方法。
+var classList = new Enrollment()
+{
+    new Student("Lessie", "Crosby"),
+    new Student("Vicki", "Petty"),
+    new Student("Ofelia", "Hobbs"),
+    new Student("Leah", "Kinney")
+};
+原本不能用，C# 6.7 有新增
+public static class StudentExtensions
+{
+    public static void Add(this Enrollment e, Student s) => e.Enroll(s);
+}
+
+6.8 改進的多載解析：
+有些建構先前會產生模稜兩可的方法呼叫，現在已可以正確解析。
+
+6.9 deterministic 編譯器選項：
+deterministic 編譯器選項可確保相同來源的後續編譯會產生相同的二進位輸出。
+
+C# 7.0 - 7.3 ( TODO ) 這版以後才有小數點，代表更版速度越來越快
+-------------------------------------------------------------
+C# 7.0 新增許多新功能至 C# 語言：
+https://docs.microsoft.com/zh-tw/dotnet/csharp/whats-new/csharp-7
+out 變數
+元組
+捨棄
+模式比對
+ref 區域變數和傳回
+區域函式
+更多運算式主體成員
+throw運算式
+通用的非同步傳回型別
+數值常值語法增強功能
+C# 7.1
+async``Main方法
+default常值運算式
+推斷的元組項目名稱
+C# 7.2
+具備實值型別的參考語意
+無後置具名引數
+數值常值中的前置底線
+private protected 存取修飾詞
+C# 7.3
+其中一個佈景主題提供了使安全的程式碼具有與不安全的程式碼一樣高效能的功能。 第二個佈景主題提供現有功能的累加增強功能。 此外，此版本中加入了新的編譯器選項。
+
+
 Q 正規 需要用到
+Q TRY CATCH 沒包好 就會爆炸惹
+Q 擴充方法 好用
+public static void add(this xxx e)
+{
+    xxxx
+}
+X.add(e);
+
+
+
+
+
+
