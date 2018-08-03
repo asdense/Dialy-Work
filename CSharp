@@ -257,7 +257,7 @@ public static void add(this xxx e)
 }
 X.add(e);
 
-Q C# 完美的CLASS ( 屬性、繼承、singleton、function、member data、命名規則、多型、attribute )
+Q C# 完美的CLASS ( 屬性、繼承(override、virtual)、singleton、function、member data、命名規則、多型、attribute )
 檔案切割
 --TOOL ( LogTool, otherTool  ) ( singleton、DESTORY、ENUM、TEMPLATE、ASYNC、THREAD、EVENT、DELEGATE)
 --QUERY ( DB )
@@ -265,6 +265,12 @@ Q C# 完美的CLASS ( 屬性、繼承、singleton、function、member data、命
       -- DBQuery5 ( 各廠常用 MES、EES、SPC、ODY？ )  ( RETRY ) ( Error Log ) ( TRY-CATCH ) ( THROW EXCEPT-TION)
       -- DBQuery ( reutrn unit / template / default .? )
 --VIEW ( form.cs ) ( Thread、DELGATE、ASYNC、EVENT) ( LYNC、LAMBDA ) ( BINDING )
+--MODEL ( APP存放其資料的地方 VIEWMODEL 呼叫MODEL裡的特性和方法 data class )
+
+(更進階)
+--VIEWMODEL ( VIEW元件、VIEWMODEL獲得MODEL中的資料，作調整後轉換成VIEW看得懂的資料，並在資料改變時通知VIEW)(在使用繫結到VIEW上的元件 )
+
+####################################################
 
 -- NULLABLE
 -- 屬性 ( [Conditional("DEBUG")] / Queue Job
@@ -273,6 +279,13 @@ Q C# 完美的CLASS ( 屬性、繼承、singleton、function、member data、命
 -- 加速 ( thread(wait、waitall、waitany) / LOCK / MUTEX /Semaphore / Parallel / PLINQ(AsParallel) )
 ( 盡可能使用Parallel.ForAll not Foreach or Parallel.ForEach )
 
+-- DataClass (enumeration overwrite、YIELD return)
+
+####################################################
+
+-- 模式 (工廠、監督者模式)
+
+####################################################
 --報表分析 使用哪個版本Framework比對 / code Server /  
 --使用率 QUERY哪張Table 
 
