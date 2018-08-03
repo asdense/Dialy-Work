@@ -271,6 +271,14 @@ Q C# 完美的CLASS ( 屬性、繼承(override、virtual)、singleton、function
 --VIEWMODEL ( VIEW元件、VIEWMODEL獲得MODEL中的資料，作調整後轉換成VIEW看得懂的資料，並在資料改變時通知VIEW)(在使用繫結到VIEW上的元件 )
 
 ####################################################
+Environment.StackTrace
+
+C# 沒有PBD很難DEBUG，不然就只能靠DUMP File去找對應的dll dumpfile
+http://aries0414.blogspot.com/2016/12/microsoft-windows-crashdump.html
+
+c# PBD ( source code file name、行號資訊、local variable name )
+http://anferneehardaway.pixnet.net/blog/post/3994168-.pdb-%E7%9A%84%E7%94%A8%E8%99%95
+####################################################
 
 -- NULLABLE
 -- 屬性 ( [Conditional("DEBUG")] / Queue Job
