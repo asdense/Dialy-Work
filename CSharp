@@ -257,6 +257,24 @@ public static void add(this xxx e)
 }
 X.add(e);
 
+Q C# 完美的CLASS ( 屬性、繼承、singleton、function、member data、命名規則、多型、attribute )
+檔案切割
+--TOOL ( LogTool, otherTool  ) ( singleton、DESTORY、ENUM、TEMPLATE、ASYNC、THREAD、EVENT、DELEGATE)
+--QUERY ( DB )
+      -- DBQuery5 正規 / 私歸
+      -- DBQuery5 ( 各廠常用 MES、EES、SPC、ODY？ )  ( RETRY ) ( Error Log ) ( TRY-CATCH ) ( THROW EXCEPT-TION)
+      -- DBQuery ( reutrn unit / template / default .? )
+--VIEW ( form.cs ) ( Thread、DELGATE、ASYNC、EVENT) ( LYNC、LAMBDA ) ( BINDING )
+
+-- NULLABLE
+-- 屬性 ( [Conditional("DEBUG")] / Queue Job
+-- DLL
+-- 記憶體 (Dispose、GC Thread No Main Thread)
+-- 加速 ( thread(wait、waitall、waitany) / LOCK / MUTEX /Semaphore / Parallel / PLINQ(AsParallel) )
+( 盡可能使用Parallel.ForAll not Foreach or Parallel.ForEach )
+
+--報表分析 使用哪個版本Framework比對 / code Server /  
+--使用率 QUERY哪張Table 
 
 
 
